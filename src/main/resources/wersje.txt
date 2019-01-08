@@ -2,5 +2,9 @@
 3. tworzenie tabel i clas, obsługa tabel create, createIfNotExists, Obiekt TableUtils
 4. dodatkowe parametry konfiguracyjne pól w klasie do konfiguracji tabeli, dodawnai eobiektu do bazy za pomocą DAO
 5. oparacje na bazie danych, Dao Manager wyszukiwanie, usuwanie obiektów z bazy
+6. zapytania do bazy (rawQueries)
+   http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite_2.html#Raw-Statements
+   SKONCZONE 5:30
+
 
 
