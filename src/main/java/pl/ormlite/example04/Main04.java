@@ -5,7 +5,7 @@ import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
-import pl.ormlite.example04.Book;
+import pl.ormlite.example04.Book04;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -26,12 +26,12 @@ public class Main04 {
         ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrlSqlite);
 
         //drop table
-        TableUtils.dropTable(connectionSource, Book.class, true);
+        TableUtils.dropTable(connectionSource, Book04.class, true);
 
-        TableUtils.createTableIfNotExists(connectionSource, Book.class);
+        TableUtils.createTableIfNotExists(connectionSource, Book04.class);
 
         // tworzenie obiektu i ustawianie setterami
-        Book book = new Book();
+        Book04 book = new Book04();
         book.setTitle("włada pierścieni");
         book.setIsbn("9980989923410293949");
         book.setAddedDate(new Date());
@@ -45,7 +45,7 @@ public class Main04 {
         book.setPrice(33.99);
 
         //dodawnie do bazy
-        Dao<Book, ?> dao = DaoManager.createDao(connectionSource, Book.class);
+        Dao<Book04, ?> dao = DaoManager.createDao(connectionSource, Book04.class);
         dao.create(book);
 
 

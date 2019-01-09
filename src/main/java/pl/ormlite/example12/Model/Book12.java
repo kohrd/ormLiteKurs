@@ -1,4 +1,4 @@
-package pl.ormlite.example04;
+package pl.ormlite.example12.Model;
 
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
@@ -7,21 +7,21 @@ import com.j256.ormlite.table.DatabaseTable;
 import java.util.Date;
 
 @DatabaseTable(tableName = "books")
-public class Book {
+public class Book12 {
 
-    public Book() {
+    public Book12() {
     }
 
-//    @DatabaseField(generatedId = true)
-//    private int id;
+    @DatabaseField(generatedId = true)
+    private int id;
 
-//    @DatabaseField(columnName = "AUTHOR_ID", foreign = true, foreignAutoCreate = true, foreignAutoRefresh = true)
-//    private Author author;
+    @DatabaseField(columnName = "AUTHOR_ID", foreign = true, foreignAutoCreate = true, foreignAutoRefresh = true)
+    private Author12 author;
 
     @DatabaseField(columnName = "TITLE", canBeNull = false)
     private String title;
 
-    @DatabaseField(columnName = "DESCRIPTION", dataType = DataType.LONG_STRING) // do dłuższych stringów
+    @DatabaseField(columnName = "DESCRIPTION", dataType = DataType.LONG_STRING)
     private String description;
 
     @DatabaseField(columnName = "ISBN", unique = true)
@@ -30,13 +30,13 @@ public class Book {
     @DatabaseField(columnName = "ADDED_DATE")
     private Date addedDate;
 
-    @DatabaseField(columnName = "DATE_RELEASE", dataType = DataType.DATE_STRING, format = "yyyy-MM-DD") // data jako string
+    @DatabaseField(columnName = "DATE_RELEASE", dataType = DataType.DATE_STRING, format = "yyyy-MM-DD")
     private Date dateRelease;
 
-    @DatabaseField(columnName = "RATING", width = 1) // maksymalnie jeden znak w tym polu
+    @DatabaseField(columnName = "RATING", width = 1)
     private String rating;
 
-    @DatabaseField(columnName = "BORROWED", defaultValue = "false") // wartość domyślna
+    @DatabaseField(columnName = "BORROWED", defaultValue = "false")
     private boolean borrowed;
 
     @DatabaseField(columnName = "PRICE")
@@ -106,27 +106,27 @@ public class Book {
         this.rating = rating;
     }
 
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public Author getAuthor() {
-//        return author;
-//    }
-//
-//    public void setAuthor(Author author) {
-//        this.author = author;
-//    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Author12 getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author12 author) {
+        this.author = author;
+    }
 
     @Override
     public String toString() {
         return "Book{" +
-                "\nid=" + //id +
-                "\n author=" + //author +
+                "\nid=" + id +
+                "\n author=" + author +
                 "\n title='" + title + '\'' +
                 "\n description='" + description + '\'' +
                 "\n isbn='" + isbn + '\'' +

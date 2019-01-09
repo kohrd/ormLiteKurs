@@ -4,9 +4,9 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable(tableName = "books")
-public class Book {
+public class Book03 {
 
-    Book(){
+    Book03(){
 
     }
 

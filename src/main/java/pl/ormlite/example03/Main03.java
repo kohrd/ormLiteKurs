@@ -24,11 +24,11 @@ public class Main03 {
         // operacje na tabeli tworzym za pomoca table utils - drop i create
 
         //drop table
-        TableUtils.dropTable(connectionSource, Book.class, true);
+        TableUtils.dropTable(connectionSource, Book03.class, true);
 
-        TableUtils.createTableIfNotExists(connectionSource, Book.class);
+        TableUtils.createTableIfNotExists(connectionSource, Book03.class);
         // przezucanie tabeli do bazy dancyh
-        TableUtils.createTable(connectionSource, Book.class);
+        TableUtils.createTable(connectionSource, Book03.class);
 
 
         connectionSource.close();

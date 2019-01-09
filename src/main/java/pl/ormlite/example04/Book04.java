@@ -1,19 +1,19 @@
-package pl.ormlite.example05;
-import com.j256.ormlite.field.DataType;
+package pl.ormlite.example04;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.Date;
 
 @DatabaseTable(tableName = "books")
-public class Book {
+public class Book04 {
 
-    public Book() {
+    public Book04() {
     }
 
-    @DatabaseField(generatedId = true)
-    private int id;
+//    @DatabaseField(generatedId = true)
+//    private int id;
 
 //    @DatabaseField(columnName = "AUTHOR_ID", foreign = true, foreignAutoCreate = true, foreignAutoRefresh = true)
 //    private Author author;
@@ -106,14 +106,14 @@ public class Book {
         this.rating = rating;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
+//
 //    public Author getAuthor() {
 //        return author;
 //    }
@@ -125,8 +125,8 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "\nid=" + id +
-                "\n author= " + //author +
+                "\nid=" + //id +
+                "\n author=" + //author +
                 "\n title='" + title + '\'' +
                 "\n description='" + description + '\'' +
                 "\n isbn='" + isbn + '\'' +

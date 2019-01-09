@@ -6,7 +6,7 @@ import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
-public class Author {
+public class Author04 {
 
     @DatabaseField(generatedId = true)
     private int id;
@@ -15,7 +15,7 @@ public class Author {
     private String name;
 
     @ForeignCollectionField
-    private ForeignCollection<Book> books;
+    private ForeignCollection<Book04> books;
 
     public int getId() {
         return id;
@@ -33,11 +33,11 @@ public class Author {
         this.name = name;
     }
 
-    public ForeignCollection<Book> getBooks() {
+    public ForeignCollection<Book04> getBooks() {
         return books;
     }
 
-    public void setBooks(ForeignCollection<Book> books) {
+    public void setBooks(ForeignCollection<Book04> books) {
         this.books = books;
     }
 

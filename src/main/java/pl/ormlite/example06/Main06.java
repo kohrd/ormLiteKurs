@@ -6,7 +6,7 @@ import com.j256.ormlite.dao.GenericRawResults;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
-import pl.ormlite.example05.Book;
+import pl.ormlite.example06.Book06;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -23,12 +23,12 @@ public class Main06 {
         String databaseUrlh2 = "jdbc:h2:./database";
 
         ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrlSqlite);
-        TableUtils.dropTable(connectionSource, Book.class, true);
-        TableUtils.createTableIfNotExists(connectionSource, Book.class);
+        TableUtils.dropTable(connectionSource, Book06.class, true);
+        TableUtils.createTableIfNotExists(connectionSource, Book06.class);
 
 
         // book1
-        Book book1 = new Book();
+        Book06 book1 = new Book06();
         book1.setTitle("janko muzykant");
         book1.setIsbn("1111111111111");
         book1.setAddedDate(new Date());
@@ -42,7 +42,7 @@ public class Main06 {
         book1.setPrice(33.99);
 
         // book2
-        Book book2 = new Book();
+        Book06 book2 = new Book06();
         book2.setTitle("nasza szkapa");
         book2.setIsbn("2222222222222222");
         book2.setAddedDate(new Date());
@@ -56,7 +56,7 @@ public class Main06 {
         book2.setPrice(99.09);
 
         // book3
-        Book book3 = new Book();
+        Book06 book3 = new Book06();
         book3.setTitle("dzieci z bulerbyn");
         book3.setIsbn("3333333333333333333");
         book3.setAddedDate(new Date());
@@ -69,7 +69,7 @@ public class Main06 {
         book3.setBorrowed(true);
         book2.setPrice(00.01);
 
-        Dao<Book, Integer> dao = DaoManager.createDao(connectionSource, Book.class);
+        Dao<Book06, Integer> dao = DaoManager.createDao(connectionSource, Book06.class);
         dao.create(book1);
         dao.create(book2);
         dao.create(book3);

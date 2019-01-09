@@ -8,7 +8,6 @@ import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.stmt.UpdateBuilder;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
-import pl.ormlite.example05.Book;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -26,12 +25,12 @@ public class Main07 {
         String databaseUrlh2 = "jdbc:h2:./database";
 
         ConnectionSource connectionSource = new JdbcConnectionSource(databaseUrlSqlite);
-        TableUtils.dropTable(connectionSource, Book.class, true);
-        TableUtils.createTableIfNotExists(connectionSource, Book.class);
+        TableUtils.dropTable(connectionSource, Book07.class, true);
+        TableUtils.createTableIfNotExists(connectionSource, Book07.class);
 
 
         // book1
-        Book book1 = new Book();
+        Book07 book1 = new Book07();
         book1.setTitle("janko muzykant");
         book1.setIsbn("1111111111111");
         book1.setAddedDate(new Date());
@@ -45,7 +44,7 @@ public class Main07 {
         book1.setPrice(33.99);
 
         // book2
-        Book book2 = new Book();
+        Book07 book2 = new Book07();
         book2.setTitle("nasza szkapa");
         book2.setIsbn("2222222222222222");
         book2.setAddedDate(new Date());
@@ -59,7 +58,7 @@ public class Main07 {
         book2.setPrice(99.09);
 
         // book3
-        Book book3 = new Book();
+        Book07 book3 = new Book07();
         book3.setTitle("dzieci z bulerbyn");
         book3.setIsbn("3333333333333333333");
         book3.setAddedDate(new Date());
@@ -72,16 +71,16 @@ public class Main07 {
         book3.setBorrowed(true);
         book2.setPrice(00.01);
 
-        Dao<Book, Integer> dao = DaoManager.createDao(connectionSource, Book.class);
+        Dao<Book07, Integer> dao = DaoManager.createDao(connectionSource, Book07.class);
         dao.create(book1);
         dao.create(book2);
         dao.create(book3);
 
 //        /queryBuilder na dao
-        QueryBuilder<Book, Integer> queryBuilder = dao.queryBuilder();
+        QueryBuilder<Book07, Integer> queryBuilder = dao.queryBuilder();
         queryBuilder.where().eq("TITLE", "nasza szkapa");
-        PreparedQuery<Book> queryBuilderPrepare = queryBuilder.prepare(); // przygotowuje zapytanie ale go nie wykonuje
-        List<Book> queryBuilderResultList = dao.query(queryBuilderPrepare); // wykonuje zapytanie
+        PreparedQuery<Book07> queryBuilderPrepare = queryBuilder.prepare(); // przygotowuje zapytanie ale go nie wykonuje
+        List<Book07> queryBuilderResultList = dao.query(queryBuilderPrepare); // wykonuje zapytanie
         queryBuilderResultList.forEach(e ->{
             System.out.println("zapytanie tytułu z queryBuilder: "+e.getTitle());
             System.out.println("zapytanie całego obiektu zwracanego z queryBuilder: "+e);
@@ -89,7 +88,7 @@ public class Main07 {
 
 
         // nieco prostsza forma queryBuilder zapytanie z powyżej napisane w jednej linii
-        List<Book> simpleUseQueryBuilder1 = dao.query(dao.queryBuilder().where().eq("TITLE", "janko muzykant").prepare());
+        List<Book07> simpleUseQueryBuilder1 = dao.query(dao.queryBuilder().where().eq("TITLE", "janko muzykant").prepare());
         simpleUseQueryBuilder1.forEach(e ->{
             System.out.println("simpleUseQueryBuilder:" +e);
         });
@@ -97,7 +96,7 @@ public class Main07 {
 
 
         //zapytanie przy pomocy queryBuilder nieco bardzij złożone
-        List<Book> simpleUseQueryBuilder2 = dao.query(dao.queryBuilder().where()
+        List<Book07> simpleUseQueryBuilder2 = dao.query(dao.queryBuilder().where()
                                                                         .eq("TITLE", "janko muzykant")
                                                                         .and()
                                                                         .eq("PRICE", 33.99 )
@@ -108,7 +107,7 @@ public class Main07 {
 
 
         //updateBulder update obiektu w bazie
-        UpdateBuilder<Book, Integer> updateuilder = dao.updateBuilder();
+        UpdateBuilder<Book07, Integer> updateuilder = dao.updateBuilder();
         updateuilder.updateColumnValue("DESCRIPTION", "opis musi zawierać conajmnije 10 znaków nasza szkapa");
         updateuilder.where().isNull("DESCRIPTION"); //updateBuilder gdzie wpis jest null
         int booksUpdate = updateuilder.update(); // rezultatem update jest int. jesli sie powiodło jest 1
