@@ -4,6 +4,7 @@
 5. oparacje na bazie danych, Dao Manager wyszukiwanie, usuwanie obiektów z bazy
 6. zapytania do bazy (rawQueries)
    http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite_2.html#Raw-Statements
+   zapytania z query Row Value
 
 
 

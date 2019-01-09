@@ -1,8 +1,7 @@
-package pl.ormlite.example06;
+package pl.ormlite.example07;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
-import com.j256.ormlite.dao.GenericRawResults;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
@@ -13,9 +12,9 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
-public class Main06 {
+public class Main07 {
+
 
     public static void main(String[] args) throws SQLException, IOException, ParseException {
 
@@ -75,55 +74,11 @@ public class Main06 {
         dao.create(book3);
 
 
-        // rawQueries 1
-        GenericRawResults<String[]> rawResultsSelectAll = dao.queryRaw("SELECT * FROM books");
-        List<String[]> result = rawResultsSelectAll.getResults(); // lista stringów
-        result.forEach(e -> {
-            for (String s : e) {
-                System.out.println("wynik rawResultsSelectAll: " + s);
-
-            }
-        });
-
-        // rawQueries 2
-
-        GenericRawResults<String[]> selectWhere = dao.queryRaw("SELECT * FROM books WHERE title = 'dzieci z bulerbyn'");
-        List<String[]> resultsSelectWhere = selectWhere.getResults();
-        resultsSelectWhere.forEach(e -> {
-            for (String s : e) {
-                System.out.println("resultsSelectWhere: " + s);
-            }
-        });
 
 
-        // rawQueries 3
-
-        GenericRawResults<String[]> selectMinMax = dao.queryRaw("SELECT MIN(price), MAX(price) FROM books");
-        List<String[]> resultsSelectMinMax = selectMinMax.getResults();
-        resultsSelectMinMax.forEach(e -> {
-            for (String s : e) {
-                System.out.println("resultsForMinMax: " + s);
-            }
-        });
-
-        // rawQueries 4
-
-        GenericRawResults<String[]> selectWhereBorrowed = dao.queryRaw("SELECT COUNT(*) FROM books WHERE BORROWED = 1");
-        List<String[]> resultsSelectWhereBorrowed = selectWhereBorrowed.getResults();
-        resultsSelectWhereBorrowed.forEach(e -> {
-            for (String s : e) {
-                System.out.println("resultsSelectWhereBorrowed: " + s);
-            }
-        });
-
-
-
-        // zapytania z query Row Value
-        // to zapytanie zwraca jeden wynik
-        double maxUnits = dao.queryRawValue("SELECT AVG(price) from books");
-        System.out.println("queryRawValue result: "+maxUnits);
 
 
         connectionSource.close();
+
     }
 }

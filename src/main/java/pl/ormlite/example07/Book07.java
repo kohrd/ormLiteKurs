@@ -1,4 +1,4 @@
-package pl.ormlite.example06;
+package pl.ormlite.example07;
 
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
@@ -7,9 +7,9 @@ import com.j256.ormlite.table.DatabaseTable;
 import java.util.Date;
 
 @DatabaseTable(tableName = "books")
-public class Book06 {
+public class Book07 {
 
-    public Book06() {
+    public Book07() {
     }
 
     @DatabaseField(generatedId = true)
