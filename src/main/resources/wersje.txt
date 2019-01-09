@@ -5,7 +5,10 @@
 6. zapytania do bazy (rawQueries)
    http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite_2.html#Raw-Statements
    zapytania z query Row Value
-7  obiekty jako typy zwracane z zapytania
+7  obiekty jako typy zwracane z zapytania (queryBuilder)
+   updateBulder update obiektu w bazie
+   http://ormlite.com/javadoc/ormlite-core/doc-files/ormlite_3.html#Statement-Builder
+
 
 
 

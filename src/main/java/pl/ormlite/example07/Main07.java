@@ -3,6 +3,9 @@ package pl.ormlite.example07;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
+import com.j256.ormlite.stmt.PreparedQuery;
+import com.j256.ormlite.stmt.QueryBuilder;
+import com.j256.ormlite.stmt.UpdateBuilder;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import pl.ormlite.example05.Book;
@@ -12,6 +15,7 @@ import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 public class Main07 {
 
@@ -72,6 +76,47 @@ public class Main07 {
         dao.create(book1);
         dao.create(book2);
         dao.create(book3);
+
+//        /queryBuilder na dao
+        QueryBuilder<Book, Integer> queryBuilder = dao.queryBuilder();
+        queryBuilder.where().eq("TITLE", "nasza szkapa");
+        PreparedQuery<Book> queryBuilderPrepare = queryBuilder.prepare(); // przygotowuje zapytanie ale go nie wykonuje
+        List<Book> queryBuilderResultList = dao.query(queryBuilderPrepare); // wykonuje zapytanie
+        queryBuilderResultList.forEach(e ->{
+            System.out.println("zapytanie tytułu z queryBuilder: "+e.getTitle());
+            System.out.println("zapytanie całego obiektu zwracanego z queryBuilder: "+e);
+        });
+
+
+        // nieco prostsza forma queryBuilder zapytanie z powyżej napisane w jednej linii
+        List<Book> simpleUseQueryBuilder1 = dao.query(dao.queryBuilder().where().eq("TITLE", "janko muzykant").prepare());
+        simpleUseQueryBuilder1.forEach(e ->{
+            System.out.println("simpleUseQueryBuilder:" +e);
+        });
+
+
+
+        //zapytanie przy pomocy queryBuilder nieco bardzij złożone
+        List<Book> simpleUseQueryBuilder2 = dao.query(dao.queryBuilder().where()
+                                                                        .eq("TITLE", "janko muzykant")
+                                                                        .and()
+                                                                        .eq("PRICE", 33.99 )
+                                                                        .prepare());
+        simpleUseQueryBuilder2.forEach(e ->{
+            System.out.println("simpleUseQueryBuilder2: "+e);
+        });
+
+
+        //updateBulder update obiektu w bazie
+        UpdateBuilder<Book, Integer> updateuilder = dao.updateBuilder();
+        updateuilder.updateColumnValue("DESCRIPTION", "opis musi zawierać conajmnije 10 znaków nasza szkapa");
+        updateuilder.where().isNull("DESCRIPTION"); //updateBuilder gdzie wpis jest null
+        int booksUpdate = updateuilder.update(); // rezultatem update jest int. jesli sie powiodło jest 1
+        System.out.println(booksUpdate);
+
+
+
+
 
 
 

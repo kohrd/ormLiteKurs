@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4a40d17c-7a38-41cf-82bd-91d22e899542" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bazaDanych06" beforeDir="false" afterPath="$PROJECT_DIR$/bazaDanych06" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/ormlite/example05/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/ormlite/example05/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/ormlite/example06/Book06.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/ormlite/example06/Main06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/ormlite/example06/Main06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bazaDanych04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bazaDanych05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bazaDanych06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Main07.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Main07.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/wersje.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/wersje.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/ormlite/example06/Book06.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pl/ormlite/example06/Main06.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pl/ormlite/example06/Main06.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/ormlite/example06/Book.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/wersje.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/wersje.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,20 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="225">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/wersje.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="168">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Main07.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="79" selection-start-line="79" selection-end-line="79" />
+            <state relative-caret-position="165">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,10 +79,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example05/Main05.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example05/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example06/Main06.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/wersje.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Main07.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example06/Book06.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Book07.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/wersje.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Main07.java" />
       </list>
     </option>
   </component>
@@ -157,26 +156,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="pl" type="462c0819:PsiDirectoryNode" />
               <item name="ormlite" type="462c0819:PsiDirectoryNode" />
-              <item name="example05" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OrmLite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OrmLite" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="ormlite" type="462c0819:PsiDirectoryNode" />
-              <item name="example06" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OrmLite" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OrmLite" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pl" type="462c0819:PsiDirectoryNode" />
-              <item name="ormlite" type="462c0819:PsiDirectoryNode" />
               <item name="example07" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -194,7 +173,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547027469218" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547037928885" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -217,20 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main06">
-    <configuration name="Main02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.ormlite.example02.Main02" />
-      <module name="OrmLite" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pl.ormlite.example03.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main07">
     <configuration name="Main03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pl.ormlite.example03.Main03" />
       <module name="OrmLite" />
@@ -283,13 +249,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main07" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.ormlite.example07.Main07" />
+      <module name="OrmLite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.ormlite.example07.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main07" />
         <item itemvalue="Application.Main06" />
         <item itemvalue="Application.Main05" />
         <item itemvalue="Application.Main04" />
         <item itemvalue="Application.Main03" />
-        <item itemvalue="Application.Main02" />
       </list>
     </recent_temporary>
   </component>
@@ -310,7 +289,7 @@
     <frame x="1920" y="312" width="1366" height="768" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16189758" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16189758" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -320,7 +299,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49924698" weight="0.3287037" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7010542" visible="true" weight="0.517341" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7010542" visible="true" weight="0.517341" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -544,20 +523,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/wersje.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.attach_pid8899">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/ormlite/example07/Main07.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        <state relative-caret-position="165">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/wersje.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
