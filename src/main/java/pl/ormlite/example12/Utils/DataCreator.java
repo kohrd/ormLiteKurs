@@ -1,6 +1,5 @@
 package pl.ormlite.example12.Utils;
 
-import pl.ormlite.example05.Book;
 import pl.ormlite.example12.Model.Author12;
 import pl.ormlite.example12.Model.Book12;
 

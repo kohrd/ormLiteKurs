@@ -6,7 +6,7 @@ import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable
-public class Author12 {
+public class Author12 implements BaseModel{
 
     @DatabaseField(generatedId = true)
     private int id;
