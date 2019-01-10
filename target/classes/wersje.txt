@@ -13,6 +13,8 @@
 12. ćwiczenia praktyczne
     DbManager przechowuje, tworzy poączenie, trzyma sterownik bazy, zamyka połaczniea, tworzy tabele, usuwa tabele, inicjalizuje baze danych
 13. interfejs, tworzenie uniwerslanego dao,
+14.klasy BookDao do przechowywanie róznych zapytań dotyczacych ksiazek
+
 
 
 
